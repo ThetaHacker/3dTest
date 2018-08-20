@@ -19,13 +19,22 @@ var ctx = c.getContext("2d");
 
 // Main loop
 
-function step() { 
-  ctx.clearRect(0,0,c.width,c.height)
-  ctx.textAlign="center";
-  ctx.font = "60px serif";
-  ctx.fillText("3D Experiment", screen.w/2, screen.h/2 + Math.sin(time/5)*30);
-  window.requestAnimationFrame(step);
-  time += 1;
+var offset = 0;
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
-window.requestAnimationFrame(step);
+function march() {
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
+}
+
+march();
