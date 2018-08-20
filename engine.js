@@ -9,32 +9,26 @@
 var screen = {w:window.innerWidth, h:window.innerHeight};
 var c = document.getElementById("screen");
 var time = 0;
-
-// Resize Canvas
 c.width = screen.w
 c.height = screen.h
-
-// Setup
 var ctx = c.getContext("2d");
 
-// Main loop 
+ 
 
-var offset = 0;
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+function clearc() {
+  ctx.clearRect(0, 0, screen.w, screen.h);
+}
+function linec(x,y,x2,y2) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
 }
 
-function march() {
-  offset++;
-  if (offset > 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+function step() {
+  clearc();
+  linec(0,0,screen.w,screen.h);
+  window.requestAnimationFrame(step);
 }
 
-march();
+window.requestAnimationFrame(step);
