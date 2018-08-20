@@ -16,5 +16,5 @@ c.height = screen.h
 // Setup
 var ctx = c.getContext("2d");
 
-ctx.font = "30px Arial";
+ctx.font = "80px Arial";
 ctx.fillText("Hello World", screen.w/2, c.height = screen.h/2);
