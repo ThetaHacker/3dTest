@@ -10,9 +10,10 @@
 var c = document.getElementById("screen");
 var time = 0;
 var ctx = c.getContext("2d");
+var screen;
 
 function setupc() {
- var screen = {w:window.innerWidth, h:window.innerHeight};
+ screen = {w:window.innerWidth, h:window.innerHeight};
  c.width = screen.w
  c.height = screen.h
 }
