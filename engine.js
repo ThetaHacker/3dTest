@@ -17,7 +17,7 @@ c.height = screen.h
 // Setup
 var ctx = c.getContext("2d");
 
-// Main loop
+// Main loop 
 
 var offset = 0;
 
