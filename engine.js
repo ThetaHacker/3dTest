@@ -6,14 +6,16 @@
 
 
 // Variables
-var screen = {w:function() {window.innerWidth}, h:function() {window.innerHeight}};
+
 var c = document.getElementById("screen");
 var time = 0;
-c.width = screen.w
-c.height = screen.h
 var ctx = c.getContext("2d");
 
- 
+function setupc() {
+ var screen = {w:window.innerWidth, h:window.innerHeight};
+ c.width = screen.w
+ c.height = screen.h
+}
 
 function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
@@ -26,6 +28,7 @@ function linec(x,y,x2,y2) {
 }
 
 function step() {
+  setupc();
   clearc();
   linec(0,0,screen.w,screen.h);
   window.requestAnimationFrame(step);
