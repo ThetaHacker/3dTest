@@ -1,3 +1,10 @@
+// @  MinecraftJS Engine v1.0
+
+// @author      : ThetaHacker
+// @description : A javascript remake of MC
+// @help        : Standard MC Controls
+
+
 // Variables
 var screen = {w:window.innerWidth, h:window.innerHeight};
 var c = document.getElementById("screen");
