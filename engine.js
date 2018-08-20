@@ -17,5 +17,5 @@ c.height = screen.h
 var ctx = c.getContext("2d");
 
 ctx.textAlign="center";
-ctx.font = "80px Press Start 2P";
+ctx.font = "60px serif";
 ctx.fillText("Minecraft Online", screen.w/2, screen.h/2);
