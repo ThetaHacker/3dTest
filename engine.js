@@ -23,7 +23,7 @@ function step() {
   ctx.clearRect(0,0,c.width,c.height)
   ctx.textAlign="center";
   ctx.font = "60px serif";
-  ctx.fillText("3D Experiment", screen.w/2, screen.h/2 + Math.sin(time)*30);
+  ctx.fillText("3D Experiment", screen.w/2, screen.h/2 + Math.sin(time/5)*30);
   window.requestAnimationFrame(step);
   time += 1;
 }
