@@ -16,5 +16,6 @@ c.height = screen.h
 // Setup
 var ctx = c.getContext("2d");
 
+ctx.textAlign="center";
 ctx.font = "80px Arial";
-ctx.fillText("Hello World", screen.w/2, screen.h/2);
+ctx.fillText("MineJS v1", screen.w/2, screen.h/2);
