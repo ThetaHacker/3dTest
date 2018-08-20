@@ -6,7 +6,7 @@
 
 
 // Variables
-var screen = {w:window.innerWidth, h:window.innerHeight};
+var screen = {w:function() {window.innerWidth}, h:function() {window.innerHeight}};
 var c = document.getElementById("screen");
 var time = 0;
 c.width = screen.w
