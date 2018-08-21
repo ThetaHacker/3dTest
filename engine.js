@@ -19,6 +19,10 @@ var yb;
 var zb;
 var xrot = 0;
 var yrot = 0;
+var xrotsin;
+var yrotsin;
+var xrotcos;
+var yrotcos;
 
 // Functions
 
@@ -32,20 +36,24 @@ function setupc() {
  c.height = screen.h
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
- xa = xpos;
- ya = ypos;
- za = zpos;
- // X rot
- xb = (xa*Math.cos(xr)) - (za*Math.sin(xr));
- yb = ya;
- zb = (za*Math.cos(xr)) + (xa*Math.sin(xr));
- // Y rot
- xa = xb;
- ya = (yb*Math.cos(yr)) - (zb*Math.sin(yr));
- za = (zb*Math.cos(yr)) + (yb*Math.sin(yr));
+  xrotsin = Math.sin(xr)*(180 / Math.PI);
+  yrotsin = Math.sin(yr)*(180 / Math.PI);
+  xrotcos = Math.cos(xr)*(180 / Math.PI);
+  yrotcos = Math.cos(yr)*(180 / Math.PI);
+  xa = xpos;
+  ya = ypos;
+  za = zpos;
+  // X rot
+  xb = (xa*xrotcos) - (za*xrotsin);
+  yb = ya;
+  zb = (za*xrotcos) + (xa*xrotsin);
+  // Y rot
+  xa = xb;
+  ya = (yb*yrotcos) - (zb*yrotsin);
+  za = (zb*yrotcos) + (yb*yrotsin);
  
- xa = (screen.w/2) + xa;
- ya = (screen.h/2) + ya;
+  xa = (screen.w/2) + xa;
+  ya = (screen.h/2) + ya;
 }
 function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
