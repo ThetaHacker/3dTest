@@ -83,9 +83,15 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   linec(xstorea,ystorea,xstoreb,ystoreb)
   
   if (debug == 1) {
-    ctx.font = "80px Arial";
-    ctx.fillText(xposa + ", " + yposa,xstorea + 5,ystorea);
-    ctx.fillText(xposb + ", " + yposb,xstoreb + 5,ystoreb);
+    
+    // Postion
+    ctx.fillText(xposa + ", " + yposa + ", " + zposa,xstorea + 7,ystorea);
+    ctx.fillText(xposb + ", " + yposb + ", " + zposb,xstoreb + 7,ystoreb);
+    // Nodes
+    ctx.rect(xposa, yposa, 12, 12);
+    ctx.fill();
+    ctx.rect(xposb, yposb, 12, 12);
+    ctx.fill();
   }
 
 }
@@ -111,12 +117,13 @@ function cube() {
 }
 // Main Loop
 
+ctx.font = "10px Arial";
 function step() {
   setupc();
   clearc();
   cube();
-
   
+  // Recursive
   window.requestAnimationFrame(step);
   
 }
