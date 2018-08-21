@@ -32,7 +32,8 @@ var player = {x:0,y:0,z:0}
 
 function controls3d() {
   var x = event.key;
-  if (x == "w") {player.z += 1}
+  if (x == "w") {player.z += 3}
+  if (x == "s") {player.z -= 3}
 }
 
 document.body.addEventListener("keypress", controls3d);
