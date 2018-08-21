@@ -36,6 +36,12 @@ function setupc() {
  c.width = screen.w
  c.height = screen.h
 }
+function debugc() {
+  if (debug=1) {
+    ctx.fillText("Screen Width: " + screen.w + "px",10,10);
+    ctx.fillText("Screen Height: " + screen.h + "px",10,22);
+  }
+}
 function xyz(xpos,ypos,zpos,xr,yr) {
   xrotsin = Math.sin((xr/180)*Math.PI);
   yrotsin = Math.sin((yr/180)*Math.PI);
@@ -121,8 +127,10 @@ ctx.font = "10px Arial";
 function step() {
   setupc();
   clearc();
+  
   cube();
   
+  debugc();
   // Recursive
   window.requestAnimationFrame(step);
   
