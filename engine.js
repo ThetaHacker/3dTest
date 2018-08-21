@@ -27,8 +27,8 @@ var yrotcos;
 // Functions
 
 function mouseupdate(event) {
-  xrot = event.clientX;
-  yrot = event.clientY;
+  // xrot = event.clientX;
+  // yrot = event.clientY;
 }
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
@@ -82,12 +82,14 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
 function step() {
   setupc();
   clearc();
-  ctx.font = "30px Arial";
-  ctx.fillText("x:" + xrot + " y:" + yrot,10,50);
   line3d(100,100,100,-100,100,100)
   line3d(100,-100,100,-100,-100,100)
   line3d(100,100,-100,-100,100,-100)
   line3d(100,-100,-100,-100,-100,-100)
+  
+  xrot += 0.05;
+  yrot += 0.05;
+  
   window.requestAnimationFrame(step);
   
 }
