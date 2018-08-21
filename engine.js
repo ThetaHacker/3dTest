@@ -54,11 +54,11 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
  var xstore;
  var ystore;
  var zstore;
- xyz(xposa,yposa,zposa,xrot,yrot)
+ xyz(cx(xposa),cy(yposa),zposa,xrot,yrot)
  xstore = xa;
  ystore = ya;
  zstore = za;
- xyz(xposb,yposb,zposb,xrot,yrot)
+ xyz(cx(xposb),cy(yposb),zposb,xrot,yrot)
  linec(xa,ya,xstore,ystore)
 
 }
@@ -68,7 +68,6 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
 function step() {
   setupc();
   clearc();
-  linec(0,0,screen.w,screen.h);
   line3d(-100,-100,-100,100,-100,-100)
   line3d(-100,100,-100,100,100,-100)
   line3d(-100,-100,100,100,-100,100)
