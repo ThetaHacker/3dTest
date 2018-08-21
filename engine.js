@@ -27,7 +27,7 @@ function setupc() {
  c.width = screen.w
  c.height = screen.h
 }
-function cx(x) {return screen.w/2 + x} function cy(y) {return screen.w/2 + x}
+function cx(x) {return screen.w/2 + x} function cy(y) {return screen.w/2 + y}
 function xyz(xpos,ypos,zpos,xr,yr) {
  xa = xpos;
  ya = ypos;
