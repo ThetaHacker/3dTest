@@ -38,8 +38,8 @@ function setupc() {
 }
 function debugc() {
   if (debug=1) {
-    ctx.fillText("Screen Width: " + screen.w + "px",10,10);
-    ctx.fillText("Screen Height: " + screen.h + "px",10,22);
+    ctx.fillText("Screen Width: " + screen.w + "px",5,14);
+    ctx.fillText("Screen Height: " + screen.h + "px",5,26);
   }
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
