@@ -17,6 +17,8 @@ var za;
 var xb;
 var yb;
 var zb;
+var xrot = 0;
+var yrot = 0;
 
 // Functions
 
@@ -48,6 +50,18 @@ function linec(x,y,x2,y2) {
   ctx.lineTo(x2, y2);
   ctx.stroke();
 }
+function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
+ var xstore;
+ var ystore;
+ var zstore;
+ xyz(xposa,yposa,zposa,xrot,yrot)
+ xstore = xa;
+ ystore = ya;
+ zstore = za;
+ xyz(xposb,yposb,zposb,xrot,yrot)
+ linec(xa,ya,xstore,ystore)
+
+}
 
 // Main Loop
 
@@ -55,6 +69,10 @@ function step() {
   setupc();
   clearc();
   linec(0,0,screen.w,screen.h);
+  line3d(-100,-100,-100,100,-100,-100)
+  line3d(-100,100,-100,100,100,-100)
+  line3d(-100,-100,100,100,-100,100)
+  line3d(-100,100,100,100,100,100)
   window.requestAnimationFrame(step);
 }
 
