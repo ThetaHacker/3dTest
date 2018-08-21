@@ -22,6 +22,10 @@ var yrot = 0;
 
 // Functions
 
+function mouseupdate(event) {
+  xrot = event.clientX;
+  yrot = event.clientY;
+}
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
  c.width = screen.w
@@ -75,8 +79,7 @@ function step() {
   line3d(100,100,-100,-100,100,-100)
   line3d(100,-100,-100,-100,-100,-100)
   window.requestAnimationFrame(step);
-  xrot = clientX;
-  yrot = clientY;
+  
 }
 
 window.requestAnimationFrame(step);
