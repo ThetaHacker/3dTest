@@ -23,6 +23,7 @@ var xrotsin;
 var yrotsin;
 var xrotcos;
 var yrotcos;
+var debug = 1;
 
 // Functions
 
@@ -65,15 +66,27 @@ function linec(x,y,x2,y2) {
   ctx.stroke();
 }
 function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
- var xstore;
- var ystore;
- var zstore;
- xyz(xposa,yposa,zposa,xrot,yrot)
- xstore = xa;
- ystore = ya;
- zstore = za;
- xyz(xposb,yposb,zposb,xrot,yrot)
- linec(xa,ya,xstore,ystore)
+  var xstorea;
+  var ystorea;
+  var zstorea;
+  var xstoreb;
+  var ystoreb;
+  var zstoreb;
+  xyz(xposa,yposa,zposa,xrot,yrot)
+  xstorea = xa;
+  ystorea = ya;
+  zstorea = za;
+  xyz(xposb,yposb,zposb,xrot,yrot)
+  xstoreb = xa;
+  ystoreb = ya;
+  zstoreb = za;
+  linec(xstorea,ystorea,xstoreb,ystoreb)
+  
+  if (debug == 1) {
+    ctx.font = "80px Arial";
+    ctx.fillText(xposa + ", " + yposa,xstorea + 5,ystorea);
+    ctx.fillText(xposb + ", " + yposb,xstoreb + 5,ystoreb);
+  }
 
 }
 function cube() {
