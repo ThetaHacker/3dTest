@@ -32,7 +32,7 @@ var player = {x:0,y:0,z:0}
 
 function controls3d() {
   var x = event.key;
-  if (x == "w") {}
+  if (x == "w") {player.z += 1}
 }
 
 document.body.addEventListener("keypress", controls3d);
@@ -63,9 +63,9 @@ function xyz(xpos,ypos,zpos,xr,yr) {
   yrotsin = Math.sin((yr/180)*Math.PI);
   xrotcos = Math.cos((xr/180)*Math.PI);
   yrotcos = Math.cos((yr/180)*Math.PI);
-  xa = xpos;
-  ya = ypos;
-  za = zpos;
+  xa = xpos - player.x;
+  ya = ypos - player.y;
+  za = zpos - player.z;
   // X rot
   xb = (xa*xrotcos) - (za*xrotsin);
   yb = ya;
