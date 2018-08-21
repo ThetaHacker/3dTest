@@ -26,6 +26,16 @@ var yrotsin;
 var xrotcos;
 var yrotcos;
 var debug = 1;
+var player = {x:0,y:0,z:0}
+
+// Controls
+
+function controls3d() {
+  var x = event.key;
+  if (x == "w") {}
+}
+
+document.body.addEventListener("keypress", controls3d);
 
 // Functions
 
