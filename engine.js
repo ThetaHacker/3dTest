@@ -72,6 +72,8 @@ function step() {
   clearc();
   line3d(100,100,100,-100,100,100)
   line3d(100,-100,100,-100,-100,100)
+  line3d(100,100,-100,-100,100,-100)
+  line3d(100,-100,-100,-100,-100,-100)
   window.requestAnimationFrame(step);
   xrot += 0.1;
   yrot += 0.05;
