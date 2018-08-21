@@ -36,10 +36,10 @@ function setupc() {
  c.height = screen.h
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
-  xrotsin = Math.sin(xr)* (Math.PI / 180);
-  yrotsin = Math.sin(yr)* (Math.PI / 180);
-  xrotcos = Math.cos(xr)* (Math.PI / 180);
-  yrotcos = Math.cos(yr)* (Math.PI / 180);
+  xrotsin = Math.sin(xr);
+  yrotsin = Math.sin(yr);
+  xrotcos = Math.cos(xr);
+  yrotcos = Math.cos(yr);
   xa = xpos;
   ya = ypos;
   za = zpos;
@@ -82,6 +82,8 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
 function step() {
   setupc();
   clearc();
+  ctx.font = "30px Arial";
+  ctx.fillText("x:" + xrot + " y:" + yrot,10,50);
   line3d(100,100,100,-100,100,100)
   line3d(100,-100,100,-100,-100,100)
   line3d(100,100,-100,-100,100,-100)
