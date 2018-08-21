@@ -1,8 +1,8 @@
 // @  3d Engine v1.0
 
-// @author      : ThetaHacker, SuperSirBird
-// @description : A javascript remake of 3D hopefully MC
-// @help        : Standard 3D Controls, WASD and MOUSE
+// @author      : ThetaHacker
+// @description : js3D a fast canvas 3D render
+// @help        : An experiment by ThetaHacker
 
 
 // Variables
