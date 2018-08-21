@@ -88,9 +88,9 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
     ctx.fillText(xposa + ", " + yposa + ", " + zposa,xstorea + 7,ystorea);
     ctx.fillText(xposb + ", " + yposb + ", " + zposb,xstoreb + 7,ystoreb);
     // Nodes
-    ctx.rect(xposa, yposa, 12, 12);
+    ctx.rect(xstorea, ystorea, 12, 12);
     ctx.fill();
-    ctx.rect(xposb, yposb, 12, 12);
+    ctx.rect(xstoreb, ystoreb, 12, 12);
     ctx.fill();
   }
 
