@@ -1,8 +1,8 @@
-// @  3dTest Engine v1.0
+// @  3d Engine v1.0
 
-// @author      : ThetaHacker
-// @description : A javascript remake of 3D
-// @help        : Standard 3D Controls
+// @author      : ThetaHacker, SuperSirBird
+// @description : A javascript remake of 3D hopefully MC
+// @help        : Standard 3D Controls, WASD and MOUSE
 
 
 // Variables
