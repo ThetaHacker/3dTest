@@ -76,17 +76,23 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
  linec(xa,ya,xstore,ystore)
 
 }
-
-// Main Loop
-
-function step() {
-  setupc();
-  clearc();
+function cube() {
   line3d(100,100,100,-100,100,100)
   line3d(100,-100,100,-100,-100,100)
   line3d(100,100,-100,-100,100,-100)
   line3d(100,-100,-100,-100,-100,-100)
   
+  line3d(100,-100,100,100,100,100)
+  line3d(-100,-100,100,100,-100,100)
+  line3d(100,-100,-100,100,100,-100)
+  line3d(-100,-100,-100,100,-100,-100)
+}
+// Main Loop
+
+function step() {
+  setupc();
+  clearc();
+
   xrot += 0.05;
   yrot += 0.05;
   
