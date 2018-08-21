@@ -17,6 +17,8 @@ var za;
 var xb;
 var yb;
 var zb;
+var xp;
+var yp;
 var xrot = 0;
 var yrot = 0;
 var xrotsin;
@@ -41,6 +43,10 @@ function debugc() {
     ctx.fillText("Screen Width: " + screen.w + "px",5,14);
     ctx.fillText("Screen Height: " + screen.h + "px",5,26);
   }
+}
+function perspective(xpos,ypos,zpos) {
+  xp = xpos/(zpos/140)
+  yp = ypos/(zpos/140)
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
   xrotsin = Math.sin((xr/180)*Math.PI);
@@ -86,6 +92,12 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   xstoreb = xa;
   ystoreb = ya;
   zstoreb = za;
+  // Perspective
+  perspective(xstorea,ystorea,zstorea)
+  xstorea = xp; ystorea = yp;
+  perspective(xstoreb,ystoreb,zstoreb)
+  xstoreb = xp; ystoreb = yp;
+  
   linec(xstorea,ystorea,xstoreb,ystoreb)
   
   if (debug == 1) {
@@ -105,20 +117,20 @@ function cube() {
   
   // Render Cube Test
   
-  line3d(100,100,100,-100,100,100)
-  line3d(100,-100,100,-100,-100,100)
-  line3d(100,100,-100,-100,100,-100)
-  line3d(100,-100,-100,-100,-100,-100)
+  line3d(100,100,100 + 100,-100,100,100 + 100)
+  line3d(100,-100,100 + 100,-100,-100,100 + 100)
+  line3d(100,100,-100 + 100,-100,100,-100 + 100)
+  line3d(100,-100,-100 + 100,-100,-100,-100 + 100)
   
-  line3d(100,-100,100,100,100,100)
-  line3d(-100,-100,100,-100,100,100)
-  line3d(100,-100,-100,100,100,-100)
-  line3d(-100,-100,-100,-100,100,-100)
+  line3d(100,-100,100 + 100,100,100,100 + 100)
+  line3d(-100,-100,100 + 100,-100,100,100 + 100)
+  line3d(100,-100,-100 + 100,100,100,-100 + 100)
+  line3d(-100,-100,-100 + 100,-100,100,-100 + 100)
   
-  line3d(100,100,-100,100,100,100)
-  line3d(-100,100,-100,-100,100,100)
-  line3d(100,-100,-100,100,-100,100)
-  line3d(-100,-100,-100,-100,-100,100)
+  line3d(100,100,-100 + 100,100,100,100 + 100)
+  line3d(-100,100,-100 + 100,-100,100,100 + 100)
+  line3d(100,-100,-100 + 100,100,-100,100 + 100)
+  line3d(-100,-100,-100 + 100,-100,-100,100 + 100)
   
 }
 // Main Loop
