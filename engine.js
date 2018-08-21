@@ -56,8 +56,8 @@ function debugc() {
   }
 }
 function perspective(xpos,ypos,zpos) {
-  xp = xpos/((zpos/140) + 0.1)
-  yp = ypos/((zpos/140) + 0.1)
+  xp = xpos/((zpos/200) + 0.1)
+  yp = ypos/((zpos/200) + 0.1)
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
   xrotsin = Math.sin((xr/180)*Math.PI);
