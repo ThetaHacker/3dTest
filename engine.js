@@ -29,7 +29,6 @@ var yrotcos;
 function mouseupdate(event) {
   xrot = event.clientX;
   yrot = event.clientY;
-  console.log(Math.sin(xrot) + " " + Math.sin(xrot/180));
 }
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
@@ -45,13 +44,13 @@ function xyz(xpos,ypos,zpos,xr,yr) {
   ya = ypos;
   za = zpos;
   // X rot
-  xb = (xa*xrotcos) - (za*xrotsin);
+  xb = (xa*xrotcos/180) - (za*xrotsin/180);
   yb = ya;
-  zb = (za*xrotcos) + (xa*xrotsin);
+  zb = (za*xrotcos/180) + (xa*xrotsin/180);
   // Y rot
   xa = xb;
-  ya = (yb*yrotcos) - (zb*yrotsin);
-  za = (zb*yrotcos) + (yb*yrotsin);
+  ya = (yb*yrotcos/180) - (zb*yrotsin/180);
+  za = (zb*yrotcos/180) + (yb*yrotsin/180);
  
   xa = (screen.w/2) + xa;
   ya = (screen.h/2) + ya;
