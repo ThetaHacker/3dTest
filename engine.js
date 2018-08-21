@@ -30,8 +30,8 @@ var debug = 1;
 // Functions
 
 function mouseupdate(event) {
-  xrot = event.clientX;
-  yrot = event.clientY;
+  xrot = screen.w/2 + event.clientX;
+  yrot = screen.h/2 + event.clientY;
 }
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
