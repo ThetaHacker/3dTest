@@ -92,6 +92,7 @@ function cube() {
 function step() {
   setupc();
   clearc();
+  cube();
 
   xrot += 0.05;
   yrot += 0.05;
