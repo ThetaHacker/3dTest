@@ -27,8 +27,9 @@ var yrotcos;
 // Functions
 
 function mouseupdate(event) {
-  // xrot = event.clientX;
-  // yrot = event.clientY;
+  xrot = event.clientX;
+  yrot = event.clientY;
+  console.log(xrot);
 }
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
@@ -103,8 +104,6 @@ function step() {
   clearc();
   cube();
 
-  xrot += 0.05;
-  yrot += 0.05;
   
   window.requestAnimationFrame(step);
   
