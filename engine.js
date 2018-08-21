@@ -65,8 +65,6 @@ function xyz(xpos,ypos,zpos,xr,yr) {
   ya = (yb*yrotcos) - (zb*yrotsin);
   za = (zb*yrotcos) + (yb*yrotsin);
  
-  xa = (screen.w/2) + xa;
-  ya = (screen.h/2) + ya;
 }
 function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
@@ -98,7 +96,7 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   perspective(xstoreb,ystoreb,zstoreb)
   xstoreb = xp; ystoreb = yp;
   
-  linec(xstorea,ystorea,xstoreb,ystoreb)
+  linec(xstorea + screen.w/2,ystorea + screen.h/2,xstoreb + screen.w/2,ystoreb + screen.h/2)
   
   if (debug == 1) {
     
