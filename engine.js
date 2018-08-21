@@ -36,10 +36,10 @@ function setupc() {
  c.height = screen.h
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
-  xrotsin = Math.sin((xr/180)*math.PI);
-  yrotsin = Math.sin((yr/180)*math.PI);
-  xrotcos = Math.cos((xr/180)*math.PI);
-  yrotcos = Math.cos((yr/180)*math.PI);
+  xrotsin = Math.sin((xr/180)*Math.PI);
+  yrotsin = Math.sin((yr/180)*Math.PI);
+  xrotcos = Math.cos((xr/180)*Math.PI);
+  yrotcos = Math.cos((yr/180)*Math.PI);
   xa = xpos;
   ya = ypos;
   za = zpos;
