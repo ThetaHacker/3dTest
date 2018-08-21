@@ -27,7 +27,6 @@ function setupc() {
  c.width = screen.w
  c.height = screen.h
 }
-function cx(x) {return screen.w/2 + x} function cy(y) {return screen.w/2 + y}
 function xyz(xpos,ypos,zpos,xr,yr) {
  xa = xpos;
  ya = ypos;
@@ -40,6 +39,9 @@ function xyz(xpos,ypos,zpos,xr,yr) {
  xa = xb;
  ya = (yb*Math.cos(yr)) - (zb*Math.sin(yr));
  za = (zb*Math.cos(yr)) + (yb*Math.sin(yr));
+ 
+ xa = (screen.w/2) + xa;
+ ya = (screen.h/2) + ya;
 }
 function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
@@ -54,11 +56,11 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
  var xstore;
  var ystore;
  var zstore;
- xyz(cx(xposa),cy(yposa),zposa,xrot,yrot)
+ xyz(xposa,yposa,zposa,xrot,yrot)
  xstore = xa;
  ystore = ya;
  zstore = za;
- xyz(cx(xposb),cy(yposb),zposb,xrot,yrot)
+ xyz(xposb,yposb,zposb,xrot,yrot)
  linec(xa,ya,xstore,ystore)
 
 }
