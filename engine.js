@@ -29,7 +29,7 @@ var yrotcos;
 function mouseupdate(event) {
   xrot = event.clientX;
   yrot = event.clientY;
-  console.log(xrot);
+  console.log(Math.sin(xrot) + " " + Math.sin(xrot/180));
 }
 function setupc() {
  screen = {w:window.innerWidth, h:window.innerHeight};
