@@ -46,10 +46,10 @@ document.body.addEventListener("keypress", controls3d);
 
 
 function calctrig() {
-  xrotsin = Math.sin((xr/180)*Math.PI);
-  yrotsin = Math.sin((yr/180)*Math.PI);
-  xrotcos = Math.cos((xr/180)*Math.PI);
-  yrotcos = Math.cos((yr/180)*Math.PI);
+  xrotsin = Math.sin((xrot/180)*Math.PI);
+  yrotsin = Math.sin((yrot/180)*Math.PI);
+  xrotcos = Math.cos((xrot/180)*Math.PI);
+  yrotcos = Math.cos((yrot/180)*Math.PI);
 }
 function mouseupdate(event) {
   xrot = event.clientX-screen.w/2;
