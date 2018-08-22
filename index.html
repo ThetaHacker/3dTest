@@ -14,12 +14,15 @@
       z-index:1;
       background-color:gray;
     }
+    #titlebar a {
+      float:left;
+    }
   </style>
 </head>
 <body>
   <div id="titlebar">
-    <h1>js3D v1.0</h1>
-    <input id="projname" placeholder="Untitled Project">
+    <a>js3D v1.0</a>
+    <a><input id="projname" placeholder="Untitled Project"></a>
   </div>
   <canvas id="screen" onmousemove="mouseupdate(event)"></canvas>
   <script src="engine.js">// 3D Engine</script>
