@@ -29,6 +29,8 @@ var shapesrendered = 0;
 var debug = 1;
 var player = {x:0,y:0,z:0}
 
+var perspective = 2; // 1 = first person, 2 = Orthographic
+
 // Controls
 
 function controls3d() {
@@ -70,8 +72,13 @@ function debugc() {
   }
 }
 function perspective(xpos,ypos,zpos) {
-  xp = xpos/((zpos/250) + 0.5)
-  yp = ypos/((zpos/250) + 0.5)
+  if (perspective == 1) {
+    xp = xpos/((zpos/250) + 0.5)
+    yp = ypos/((zpos/250) + 0.5)
+  }
+  if (perspective == 2) {
+    // Orthographic
+  }
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
   
