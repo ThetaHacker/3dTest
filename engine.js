@@ -92,6 +92,17 @@ function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
 }
 function linec(x,y,x2,y2) {
+  // Basic Clip
+  if (this.x>screen.w) {this.x = screen.w}
+  if (this.y>screen.h) {this.y = screen.h}
+  if (this.x2>screen.w2) {this.x2 = screen.w2}
+  if (this.y2>screen.h2) {this.y2 = screen.h2}
+  if (this.x<0) {this.x = 0}
+  if (this.y<0) {this.y = 0}
+  if (this.x2<0) {this.x2 = 0}
+  if (this.y2<0) {this.y2 = 0}
+  
+  // Draw
   ctx.lineWidth=1;
   ctx.beginPath();
   ctx.moveTo(x, y);
