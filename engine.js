@@ -93,25 +93,24 @@ function clearc() {
 }
 function linec(x,y,x2,y2) {
   // Basic Clip
-  if (this.x>screen.w) {this.x = screen.w}
-  if (this.y>screen.h) {this.y = screen.h}
-  if (this.x2>screen.w2) {this.x2 = screen.w2}
-  if (this.y2>screen.h2) {this.y2 = screen.h2}
-  if (this.x<0) {this.x = 0}
-  if (this.y<0) {this.y = 0}
-  if (this.x2<0) {this.x2 = 0}
-  if (this.y2<0) {this.y2 = 0}
-  
-  // REMOVE THIS 
-  this.y += 70;
-  this.y2 += 70;
-  // END
+  var x1clip;
+  var y1clip;
+  var x2clip;
+  var y2clip;
+  if (x1clip>screen.w) {x1clip = screen.w}
+  if (y1clip>screen.h) {y1clip = screen.h}
+  if (x2clip>screen.w2) {x2clip = screen.w2}
+  if (y2clip>screen.h2) {y2clip = screen.h2}
+  if (x1clip<0) {x1clip = 0}
+  if (y1clip<0) {y1clip = 0}
+  if (x2clip<0) {x2clip = 0}
+  if (y2clip<0) {y2clip = 0}
   
   // Draw
   ctx.lineWidth=1;
   ctx.beginPath();
-  ctx.moveTo(x, y);
-  ctx.lineTo(x2, y2);
+  ctx.moveTo(x1clip, y1clip);
+  ctx.lineTo(x2clip, y2clip);
   ctx.stroke();
   ctx.lineWidth=0;
 }
