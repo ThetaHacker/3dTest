@@ -63,9 +63,9 @@ function setupc() {
 }
 function debugc() {
   if (debug=1) {
-    ctx.fillText("Screen Width: " + screen.w + "px",5,34);
+    ctx.fillText("Screen Width: " + screen.w + "px",5,44);
     ctx.fillText("Screen Height: " + screen.h + "px",5,56);
-    ctx.fillText("Shapes/Text Rendered: " + shapesrendered,5,78);
+    ctx.fillText("Shapes/Text Rendered: " + shapesrendered,5,68);
     shapesrendered = 0;
   }
 }
