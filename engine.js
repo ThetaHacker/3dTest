@@ -93,10 +93,10 @@ function clearc() {
 }
 function linec(x,y,x2,y2) {
   // Basic Clip
-  var x1clip;
-  var y1clip;
-  var x2clip;
-  var y2clip;
+  var x1clip = x;
+  var y1clip = y;
+  var x2clip = x2;
+  var y2clip = y2;
   if (x1clip>screen.w) {x1clip = screen.w}
   if (y1clip>screen.h) {y1clip = screen.h}
   if (x2clip>screen.w2) {x2clip = screen.w2}
