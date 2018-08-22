@@ -70,8 +70,8 @@ function debugc() {
   }
 }
 function perspective(xpos,ypos,zpos) {
-  xp = xpos/((zpos/220) + 0.5)
-  yp = ypos/((zpos/220) + 0.5)
+  xp = xpos/((zpos/250) + 0.5)
+  yp = ypos/((zpos/250) + 0.5)
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
   
@@ -141,8 +141,6 @@ function cube() {
   
   // Render Cube Test
   
-  for (i=0;i<30;i++) {
-  
   line3d(100,100,100 + 250,-100,100,100 + 250)
   line3d(100,-100,100 + 250,-100,-100,100 + 250)
   line3d(100,100,-100 + 250,-100,100,-100 + 250)
@@ -157,7 +155,6 @@ function cube() {
   line3d(-100,100,-100 + 250,-100,100,100 + 250)
   line3d(100,-100,-100 + 250,100,-100,100 + 250)
   line3d(-100,-100,-100 + 250,-100,-100,100 + 250)
-  }
 }
 // Main Loop
 
