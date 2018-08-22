@@ -71,7 +71,7 @@ function debugc() {
     shapesrendered = 0;
   }
 }
-function perspective(xpos,ypos,zpos) {
+function perspectivecalc(xpos,ypos,zpos) {
   if (perspective == 1) {
     xp = xpos/((zpos/250) + 0.5)
     yp = ypos/((zpos/250) + 0.5)
@@ -133,9 +133,9 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   ystoreb = ya;
   zstoreb = za;
   // Perspective
-  perspective(xstorea,ystorea,zstorea)
+  perspectivecalc(xstorea,ystorea,zstorea)
   xstorea = xp; ystorea = yp;
-  perspective(xstoreb,ystoreb,zstoreb)
+  perspectivecalc(xstoreb,ystoreb,zstoreb)
   xstoreb = xp; ystoreb = yp;
   
   linec(xstorea + screen.w/2,ystorea + screen.h/2,xstoreb + screen.w/2,ystoreb + screen.h/2)
