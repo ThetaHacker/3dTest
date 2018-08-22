@@ -1,1 +1,26 @@
-<head><title>3D</title><style>body {margin:0px;}</style></head><body><canvas id="screen" onmousemove="mouseupdate(event)"></canvas><script src="engine.js"></script></body>
+<head>
+  <title>3D</title>
+  <style>
+    body {margin:0px;}
+    canvas {
+      position:absolute;
+      left:0px;
+      up:0px;
+      z-index:0;
+    }
+    #titlebar {
+      position:absolute;
+      float:left;
+      z-index:1;
+      background-color:gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="titlebar">
+    <h1>js3D v1.0</h1>
+    <input id="projname" placeholder="Untitled Project">
+  </div>
+  <canvas id="screen" onmousemove="mouseupdate(event)"></canvas>
+  <script src="engine.js">// 3D Engine</script>
+</body>
