@@ -70,8 +70,8 @@ function debugc() {
   }
 }
 function perspective(xpos,ypos,zpos) {
-  xp = xpos/((zpos/300) + 0.1)
-  yp = ypos/((zpos/300) + 0.1)
+  xp = xpos/((zpos/220) + 0.5)
+  yp = ypos/((zpos/220) + 0.5)
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
   
