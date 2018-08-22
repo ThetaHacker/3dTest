@@ -32,8 +32,12 @@ var player = {x:0,y:0,z:0}
 
 function controls3d() {
   var x = event.key;
-  if (x == "w") {player.z += 3}
-  if (x == "s") {player.z -= 3}
+  if (x == "w") {
+    player.z += 5
+  }
+  if (x == "s") {
+    player.z += -5
+  }
 }
 
 document.body.addEventListener("keypress", controls3d);
@@ -81,10 +85,12 @@ function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
 }
 function linec(x,y,x2,y2) {
+  ctx.lineWidth=3;
   ctx.beginPath();
   ctx.moveTo(x, y);
   ctx.lineTo(x2, y2);
   ctx.stroke();
+  ctx.lineWidth=0;
 }
 function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   var xstorea;
