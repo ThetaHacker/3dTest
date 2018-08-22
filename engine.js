@@ -25,6 +25,7 @@ var xrotsin;
 var yrotsin;
 var xrotcos;
 var yrotcos;
+var shapesrendered;
 var debug = 1;
 var player = {x:0,y:0,z:0}
 
@@ -64,6 +65,7 @@ function debugc() {
   if (debug=1) {
     ctx.fillText("Screen Width: " + screen.w + "px",5,14);
     ctx.fillText("Screen Height: " + screen.h + "px",5,26);
+    ctx.fillText("Shapes/Text Rendered: " + shapesrendered,5,38);
   }
 }
 function perspective(xpos,ypos,zpos) {
@@ -129,6 +131,7 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
     ctx.fill();
     ctx.rect(xstoreb-4 + screen.w/2, ystoreb-4 + screen.h/2, 8, 8);
     ctx.fill();
+    shapesrendered +=5;
   }
 
 }
