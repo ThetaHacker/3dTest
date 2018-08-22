@@ -114,11 +114,19 @@ function line3d(xposa,yposa,zposa,xposb,yposb,zposb) {
   var xstoreb;
   var ystoreb;
   var zstoreb;
-  xyz(xposa,yposa,zposa,xrot,yrot)
+  if (perspective == 1) {
+    xyz(xposa,yposa,zposa + 200,xrot,yrot)
+  } else {
+    xyz(xposa,yposa,zposa,xrot,yrot)
+  }
   xstorea = xa;
   ystorea = ya;
   zstorea = za;
-  xyz(xposb,yposb,zposb,xrot,yrot)
+  if (perspective == 1) {
+    xyz(xposb,yposb,zposb + 200,xrot,yrot)
+  } else {
+    xyz(xposb,yposb,zposb,xrot,yrot)
+  }
   xstoreb = xa;
   ystoreb = ya;
   zstoreb = za;
@@ -148,20 +156,20 @@ function cube() {
   
   // Render Cube Test
   
-  line3d(100,100,100 + 250,-100,100,100 + 250)
-  line3d(100,-100,100 + 250,-100,-100,100 + 250)
-  line3d(100,100,-100 + 250,-100,100,-100 + 250)
-  line3d(100,-100,-100 + 250,-100,-100,-100 + 250)
+  line3d(100,100,100,-100,100,100)
+  line3d(100,-100,100,-100,-100,100)
+  line3d(100,100,-100,-100,100,-100)
+  line3d(100,-100,-100,-100,-100,-100)
   
-  line3d(100,-100,100 + 250,100,100,100 + 250)
-  line3d(-100,-100,100 + 250,-100,100,100 + 250)
-  line3d(100,-100,-100 + 250,100,100,-100 + 250)
-  line3d(-100,-100,-100 + 250,-100,100,-100 + 250)
+  line3d(100,-100,100,100,100,100)
+  line3d(-100,-100,100,-100,100,100)
+  line3d(100,-100,-100,100,100,-100)
+  line3d(-100,-100,-100,-100,100,-100)
   
-  line3d(100,100,-100 + 250,100,100,100 + 250)
-  line3d(-100,100,-100 + 250,-100,100,100 + 250)
-  line3d(100,-100,-100 + 250,100,-100,100 + 250)
-  line3d(-100,-100,-100 + 250,-100,-100,100 + 250)
+  line3d(100,100,-100,100,100,100)
+  line3d(-100,100,-100,-100,100,100)
+  line3d(100,-100,-100,100,-100,100)
+  line3d(-100,-100,-100,-100,-100,100)
 }
 // Main Loop
 
