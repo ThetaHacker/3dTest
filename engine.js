@@ -44,6 +44,13 @@ document.body.addEventListener("keypress", controls3d);
 
 // Functions
 
+
+function calctrig() {
+  xrotsin = Math.sin((xr/180)*Math.PI);
+  yrotsin = Math.sin((yr/180)*Math.PI);
+  xrotcos = Math.cos((xr/180)*Math.PI);
+  yrotcos = Math.cos((yr/180)*Math.PI);
+}
 function mouseupdate(event) {
   xrot = event.clientX-screen.w/2;
   yrot = event.clientY-screen.h/2;
@@ -64,10 +71,7 @@ function perspective(xpos,ypos,zpos) {
   yp = ypos/((zpos/300) + 0.1)
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
-  xrotsin = Math.sin((xr/180)*Math.PI);
-  yrotsin = Math.sin((yr/180)*Math.PI);
-  xrotcos = Math.cos((xr/180)*Math.PI);
-  yrotcos = Math.cos((yr/180)*Math.PI);
+  
   xa = xpos - player.x;
   ya = ypos - player.y;
   za = zpos - player.z;
@@ -156,7 +160,7 @@ ctx.font = "10px Arial";
 function step() {
   setupc();
   clearc();
-  
+  calctrig();
   cube();
   
   debugc();
