@@ -25,7 +25,7 @@ var xrotsin;
 var yrotsin;
 var xrotcos;
 var yrotcos;
-var shapesrendered;
+var shapesrendered = 0;
 var debug = 1;
 var player = {x:0,y:0,z:0}
 
@@ -66,6 +66,7 @@ function debugc() {
     ctx.fillText("Screen Width: " + screen.w + "px",5,14);
     ctx.fillText("Screen Height: " + screen.h + "px",5,26);
     ctx.fillText("Shapes/Text Rendered: " + shapesrendered,5,38);
+    shapesrendered = 0;
   }
 }
 function perspective(xpos,ypos,zpos) {
