@@ -78,6 +78,8 @@ function perspective(xpos,ypos,zpos) {
   }
   if (perspective == 2) {
     // Orthographic
+    xp = xpos
+    yp = ypos
   }
 }
 function xyz(xpos,ypos,zpos,xr,yr) {
