@@ -102,6 +102,11 @@ function linec(x,y,x2,y2) {
   if (this.x2<0) {this.x2 = 0}
   if (this.y2<0) {this.y2 = 0}
   
+  // REMOVE THIS 
+  this.y += 70;
+  this.y2 += 70;
+  // END
+  
   // Draw
   ctx.lineWidth=1;
   ctx.beginPath();
