@@ -85,7 +85,7 @@ function clearc() {
   ctx.clearRect(0, 0, screen.w, screen.h);
 }
 function linec(x,y,x2,y2) {
-  ctx.lineWidth=3;
+  ctx.lineWidth=1;
   ctx.beginPath();
   ctx.moveTo(x, y);
   ctx.lineTo(x2, y2);
