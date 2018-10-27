@@ -29,7 +29,7 @@ var shapesrendered = 0;
 var debug = 1;
 var player = {x:0,y:0,z:0}
 
-var perspective = 2; // 1 = first person, 2 = Orthographic
+var perspective = 1; // 1 = first person, 2 = Orthographic
 
 // Controls
 
