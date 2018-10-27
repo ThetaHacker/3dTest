@@ -73,8 +73,8 @@ function debugc() {
 }
 function perspectivecalc(xpos,ypos,zpos) {
   if (perspective == 1) {
-    xp = xpos/((zpos/250) + 0.5)
-    yp = ypos/((zpos/250) + 0.5)
+    xp = xpos/(((zpos+200)/250) + 0.5)
+    yp = ypos/(((zpos+200)/250) + 0.5)
   }
   if (perspective == 2) {
     // Orthographic
